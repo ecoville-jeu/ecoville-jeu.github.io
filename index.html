@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoville</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container"></div>
+    <div id="ui-container">
+        <div id="game-stats">
+            <p>Budget: <span id="budget">$100,000</span></p>
+            <p>Population: <span id="population">0</span></p>
+            <p>Bonheur Générale: <span id="happiness">100</span></p>
+            <p>Énergie: <span id="energy">0</span></p>
+            <p>Pollution: <span id="pollution">0</span></p>
+            <p>Revenue: <span id="income">0</span>/mois</p>
+        </div>
+        <div id="fps-monitor" class="stats-item">FPS: <span id="fps">60</span></div>
+    </div>
+    <div id="building-selector">
+        <button data-type="residentiel">Complexe résidentiel ($10,000)</button>
+        <button data-type="maison">Maison ($1000)</button>
+        <button data-type="eolienne">Éolienne ($20,000)</button>
+        <button data-type="arbre">Arbre ($5,000)</button>
+        <button data-type="gaz">Usine à gaz naturel ($15,000)</button>
+        <button data-type="usine">Usine ($10,000)</button>
+    </div>
+
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.151.3/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="js/main.js"></script>
+    
+
+<div id="arduino-controls" class="control-panel">
+    <button id="connect-arduino" class="control-button">Connecter l'Arduino</button>
+    <span id="arduino-status">Non connecté</span>
+</div>
+
+<script src="js/arduinoHandler.js" type="module"></script>
+
+</body>
+</html>
